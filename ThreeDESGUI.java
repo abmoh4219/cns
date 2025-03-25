@@ -146,7 +146,7 @@ public class ThreeDESGUI extends JFrame {
             return;
         }
         
-        try {
+       try {
             cipher.init(Cipher.ENCRYPT_MODE, secretKey, iv);
             byte[] encryptedBytes = cipher.doFinal(inputText.getBytes("utf-8"));
             outputTextArea.setText(Base64.getEncoder().encodeToString(encryptedBytes));
